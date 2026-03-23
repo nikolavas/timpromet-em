@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { companyInfo, navigation } from '@/data/content';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
 
 export default function Footer() {
   return (
@@ -9,9 +10,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white tracking-tight">
-              {companyInfo.name}
-            </h3>
+            <Link href="/" className="inline-block">
+              <Logo className="h-10 w-auto" variant="light" />
+            </Link>
             <p className="text-emerald-200 text-sm leading-relaxed">
               Вашиот доверлив партнер за свежо овошје, зеленчук, брашно, сточна храна и земјоделски производи. Квалитет на кој можете да се потпрете.
             </p>
@@ -74,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-emerald-900 text-center text-sm text-emerald-400">
-          <p>&copy; {new Date().getFullYear()} {companyInfo.name}. Сите права се задржани.</p>
+          <p>&copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> {companyInfo.name}. Сите права се задржани.</p>
         </div>
       </div>
     </footer>

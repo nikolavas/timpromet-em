@@ -115,10 +115,12 @@ export const news = [
 ];
 
 export const galleryImages = [
-  'https://picsum.photos/seed/gal1/800/800',
-  'https://picsum.photos/seed/gal2/800/800',
-  'https://picsum.photos/seed/gal3/800/800',
-  'https://picsum.photos/seed/gal4/800/800',
-  'https://picsum.photos/seed/gal5/800/800',
-  'https://picsum.photos/seed/gal6/800/800',
+  { url: 'https://picsum.photos/seed/gal1/800/1000', title: 'Свеж зеленчук', category: 'Производи' },
+  { url: 'https://picsum.photos/seed/gal2/1000/800', title: 'Нашиот магацин', category: 'Логистика' },
+  { url: 'https://picsum.photos/seed/gal3/800/800', title: 'Дистрибуција', category: 'Услуги' },
+  { url: 'https://picsum.photos/seed/gal4/1000/1000', title: 'Квалитетно брашно', category: 'Производи' },
+  { url: 'https://picsum.photos/seed/gal5/800/1200', title: 'Сточна храна', category: 'Земјоделство' },
+  { url: 'https://picsum.photos/seed/gal6/1200/800', title: 'Тимска работа', category: 'Компанија' },
+  { url: 'https://picsum.photos/seed/gal7/800/800', title: 'Локални полиња', category: 'Потекло' },
+  { url: 'https://picsum.photos/seed/gal8/1000/800', title: 'Пакување', category: 'Квалитет' },
 ];

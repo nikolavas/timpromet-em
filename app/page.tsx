@@ -13,6 +13,7 @@ export default function Home() {
             src="https://picsum.photos/seed/agriculture-hero/1920/1080"
             alt="Agriculture field"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
             referrerPolicy="no-referrer"
@@ -69,6 +70,7 @@ export default function Home() {
                 src="https://picsum.photos/seed/about-company/800/800"
                 alt="Тим Промет-ЕМ магацин"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -95,6 +97,7 @@ export default function Home() {
                       src={category.image}
                       alt={category.name}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       referrerPolicy="no-referrer"
                     />
@@ -186,9 +189,10 @@ export default function Home() {
             {galleryImages.slice(0, 4).map((img, index) => (
               <div key={index} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
                 <Image
-                  src={img}
-                  alt={`Галерија слика ${index + 1}`}
+                  src={img.url}
+                  alt={img.title}
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />

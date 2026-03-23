@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  compiler: {
+    styledComponents: true,
+  },
   // Allow access to remote image placeholder.
   images: {
     remotePatterns: [
@@ -21,6 +24,11 @@ const nextConfig: NextConfig = {
   },
   output: 'standalone',
   transpilePackages: ['motion'],
+  devIndicators: {
+    appIsrStatus: false,
+    buildActivity: true,
+    buildActivityPosition: 'bottom-right',
+  },
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
     // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

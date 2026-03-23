@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { companyInfo, navigation } from '@/data/content';
 import { Menu, Phone, MapPin, X } from 'lucide-react';
 import { useState } from 'react';
+import { Logo } from '@/components/ui/Logo';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,8 +36,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-emerald-900 tracking-tight">
-              Тим Промет-ЕМ
+            <Link href="/" className="flex items-center">
+              <Logo className="h-12 w-auto" />
             </Link>
           </div>
 
